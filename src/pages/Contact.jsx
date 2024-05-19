@@ -21,7 +21,7 @@ function Contact() {
         </div>
         <div className="w-[90%] lg:w-[80%] flex items-center flex-col md:flex-row mx-auto justify-between">
           {/* left side div */}
-          <div className="pb-1 w-[40%]">
+          <div className="pb-1 ml-8 md:ml-0 w-full md:w-[40%]">
             {/* mobile */}
             <div className="flex flex-row ">
               <img

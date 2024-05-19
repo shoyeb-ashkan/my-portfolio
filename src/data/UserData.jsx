@@ -18,11 +18,6 @@ export const UserData = {
       url: "https://github.com/shoyeb-ashkan",
       icon: "AiFillGithub",
     },
-    {
-      socialMediaName: "instagram",
-      url: "https://www.instagram.com/shoyeb_ashkan/",
-      icon: "AiFillInstagram",
-    },
   ],
   typewriterOptions: {
     strings: [

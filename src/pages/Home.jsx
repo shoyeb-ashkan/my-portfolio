@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { AiFillGithub} from "react-icons/ai";
 import { FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 import { UserData } from "../data/UserData";
 
@@ -14,13 +14,12 @@ function Home() {
     FaLinkedinIn: FaLinkedinIn,
     AiFillGithub: AiFillGithub,
     FaXTwitter: FaXTwitter,
-    AiFillInstagram: AiFillInstagram,
+    // AiFillInstagram: AiFillInstagram,
   };
   return (
     <div
       className={
-        "w-full h-auto mb-24 " +
-        `${window.innerHeight === 730 ? "" : "lg:h-[550px]"}`
+        "w-full mb-24 min-h-[520px]"
       }
     >
       <div className=" w-[90%] flex items-center flex-col lg:justify-between mt-32 sm:flex-row mx-auto lg:w-[80%]">
