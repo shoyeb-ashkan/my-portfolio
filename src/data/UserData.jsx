@@ -32,6 +32,6 @@ export const UserData = {
     deleteSpeed: 30,
   },
   resumeUrl:
-    "https://drive.google.com/file/d/1QsoVBk4BKWZQ20m1laAPo1FC0fIBGGOz/view?usp=drive_link",
+    "https://drive.google.com/drive/folders/1GJHiUvwgMPh3lRWUdrGY4XmTCP9427UJ?usp=drive_link",
   footerLink: "#",
 };
