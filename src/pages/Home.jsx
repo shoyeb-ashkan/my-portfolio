@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillGithub} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 import { UserData } from "../data/UserData";
 
@@ -17,11 +17,7 @@ function Home() {
     // AiFillInstagram: AiFillInstagram,
   };
   return (
-    <div
-      className={
-        "w-full mb-24 min-h-[520px]"
-      }
-    >
+    <div className="w-full mb-24 min-h-[540px] lg:h-[70vh]">
       <div className=" w-[90%] flex items-center flex-col lg:justify-between mt-32 sm:flex-row mx-auto lg:w-[80%]">
         <div className="w-full">
           <h2 className="text-3xl font-semibold lg:text-3xl text-gray-900 leading-tight">
@@ -61,10 +57,10 @@ function Home() {
           />
         </div>
       </div>
-      <div className="flex w-full justify-center">
+      <div className="flex w-full flex-wrap justify-center">
         <Link
           to="contact"
-          className="w-24 h-12 sm:mt-[10%] button-UI m-10 text-gray-900 lg:mt-7 hover:text-white font-semibold py-2 px-4 rounded-lg shadow-xl hover:bg-white hover:bg-opacity-20 hover:shadow-lg hover:opacity-80"
+          className=" inline-block button-UI rounded-lg px-3 py-2 tracking-wider font-semibold text-gray-900 mr-2 my-2 mt-5 shadow-lg hover:text-white duration-300"
         >
           Hire Me
         </Link>

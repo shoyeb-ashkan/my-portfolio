@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import logo from "../assets/svgs/logo.svg";
 import { CgMenuRight } from "react-icons/cg";
 import { NavLink, useLocation } from "react-router-dom";
@@ -6,8 +6,6 @@ import { UserData } from "../data/UserData";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const menuRef = useRef(null);
-  const buttonRef = useRef(null);
 
   const location = useLocation();
 
@@ -32,7 +30,7 @@ function Header() {
           <div className="flex flex-row space-x-4 gap-6 cursor-pointer items-center">
             <NavLink
               className={({ isActive }) =>
-                ` ${
+                `duration-500 hover:underline underline-offset-4 hover:text-white ${
                   isActive
                     ? "text-white font-semibold"
                     : "text-gray-900 font-medium"
@@ -44,7 +42,7 @@ function Header() {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                ` ${
+                `duration-500 hover:underline underline-offset-4 hover:text-white ${
                   isActive
                     ? "text-white font-semibold"
                     : "text-gray-900 font-medium"
@@ -56,7 +54,7 @@ function Header() {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                ` ${
+                `duration-500 hover:underline underline-offset-4 hover:text-white ${
                   isActive
                     ? "text-white font-semibold"
                     : "text-gray-900 font-medium"
@@ -71,7 +69,7 @@ function Header() {
                 ` ${
                   isActive
                     ? "text-white font-semibold"
-                    : "text-gray-900 font-medium"
+                    : "text-gray-900 font-medium duration-500 hover:underline underline-offset-4 hover:text-white"
                 }`
               }
               to="contact"
@@ -83,7 +81,7 @@ function Header() {
                 onClick={() => {
                   window.open(resumeUrl);
                 }}
-                className="w-[120px] button-UI text-gray-900 hover:text-white font-bold py-1.5 px-4 rounded-lg tracking-wider shadow-xl"
+                className="w-[120px] button-UI text-gray-900 hover:text-white font-bold py-1.5 px-4 rounded-lg tracking-wider shadow-xl duration-500 hover:underline underline-offset-4"
               >
                 Resume
               </button>
@@ -93,10 +91,7 @@ function Header() {
         {/* Mobile view */}
         {mobileMenuOpen && (
           <div>
-            <nav
-              ref={menuRef}
-              className="sm:hidden absolute top-0 z-0 right-0 w-[200px] h-screen shadow-lg  bg-gradient-to-tr from-[#4158d0]/70 via-[#c850c0]/80 to-[#ffcc70]/90"
-            >
+            <nav className="sm:hidden absolute top-0 z-0 right-0 w-[200px] h-screen shadow-lg  bg-gradient-to-tr from-[#4158d0]/70 via-[#c850c0]/80 to-[#ffcc70]/90">
               <div className="flex mt-[70px] flex-col gap-8 items-center">
                 <NavLink
                   className={({ isActive }) =>
@@ -104,7 +99,7 @@ function Header() {
                       isActive
                         ? "text-white font-semibold"
                         : "text-gray-900 font-medium"
-                    } cursor-pointer`
+                    } cursor-pointer duration-500 hover:underline underline-offset-4`
                   }
                   onClick={toggleMobileMenu}
                   to="/"
@@ -117,7 +112,7 @@ function Header() {
                       isActive
                         ? "text-white font-semibold"
                         : "text-gray-900 font-medium"
-                    } cursor-pointer`
+                    } cursor-pointer duration-500 hover:underline underline-offset-4`
                   }
                   onClick={toggleMobileMenu}
                   to="projects"
@@ -130,7 +125,7 @@ function Header() {
                       isActive
                         ? "text-white font-semibold"
                         : "text-gray-900 font-medium"
-                    } cursor-pointer`
+                    } cursor-pointer duration-500 hover:underline underline-offset-4`
                   }
                   onClick={toggleMobileMenu}
                   to="about"
@@ -144,7 +139,7 @@ function Header() {
                       isActive
                         ? "text-white font-semibold"
                         : "text-gray-900 font-medium"
-                    } cursor-pointer`
+                    } cursor-pointer duration-500 hover:underline underline-offset-4`
                   }
                   to="contact"
                 >
@@ -155,7 +150,7 @@ function Header() {
                     onClick={() => {
                       window.open(resumeUrl);
                     }}
-                    className="w-[120px] button-UI text-gray-900 hover:text-white font-bold py-1.5 px-4 rounded-lg tracking-wider shadow-xl cursor-pointer"
+                    className="w-[120px] button-UI text-gray-900 hover:text-white font-bold py-1.5 px-4 rounded-lg tracking-wider shadow-xl cursor-pointer duration-500"
                   >
                     Resume
                   </button>
@@ -167,7 +162,6 @@ function Header() {
 
         <div className="sm:hidden block">
           <button
-            ref={buttonRef}
             className="block mr-5 z-[1000] absolute top-2 right-2 hover:text-gray-900 focus:outline-none"
             onClick={toggleMobileMenu}
           >
